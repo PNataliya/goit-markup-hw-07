@@ -1162,11 +1162,11 @@ margin-right: 70px;
 
 
 
-.footer-socials-item {
+.footer-list__socials-item {
   margin-right: 10px;
 }
 
-.footer-socials-item:last-child {
+.footer-list__socials-item:last-child {
   margin-right: 0;
 }
 
