@@ -53,10 +53,15 @@ p {
 }
 
 .list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
+
 
 .list.flex {
   display: flex;
@@ -126,7 +131,7 @@ p {
   color: var(--logo-text-color);
 }
 
-.logo-accent {
+.logo--accent {
   text-decoration: none;
   color: var(--accent-color);
 }
@@ -134,8 +139,14 @@ p {
 /* =========================
 часть лого в Футере 
 ========================== */
-.logo-white {
+.logo--white {
   display: inline-block;
+  font-family: Raleway,
+  sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
   margin-bottom: 20px;
   text-decoration: none;
   color: var(--wight-color);
@@ -157,9 +168,14 @@ p {
   border-bottom: 1px solid #ececec;
 }
 
-.header-container {
+.header__container {
   display: flex;
   align-items: center;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .navigate {
@@ -175,40 +191,58 @@ p {
   margin-right: 8px;
 }
 
-.site-nav:not(:last-child) {
+.navlist {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navlist__site:not(:last-child) {
   margin-right: 50px;
 }
 
-.contact-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.site-nav {
+.navlist__site {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  list-style: none;
 }
 /* ===============================
 подчеркивание на активной странице - start 
 ===============================  */
 
-.site-nav.current {
+.navlist__site--current {
   padding: 0;
 }
-.link.active {
+
+.navlist__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+.navlist__link--active {
   position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  text-decoration-line: none;
 }
 
-.active::after {
+.navlist__link--active::after {
   position: absolute;
   content: '';
   left: 0;
@@ -217,6 +251,7 @@ p {
   height: 4px;
   background: #2196F3;
   border-radius: 2px; 
+  
 }
 
 
@@ -228,8 +263,21 @@ p {
 ссылки на e-mail и тел - start 
 ================================ */
 
+.header-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
 
-.link-head-contact {
+.list.contact {
+  margin-left: auto;
+}
+
+.header-contact__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,34 +288,25 @@ p {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  text-decoration: none;
   color: var(--primary-text-color);
   transition: color 250ms
   cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
-.link.link-head-contact:hover,
-.link.link-head-contact:focus {
+.header-contact__link:hover,
+.header-contact__link:focus {
   color: var(--accent-color);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.navlist__link:hover,
+.navlist__link:focus {
   color: var(--accent-color);
 }
 
-.site-nav .link {
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--title-text-color);
-  transition: color 250ms
-  cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.current >.link {
+.navlist__site--current >.navlist__link--active {
   color: var(--accent-color);
 }
 
@@ -275,24 +314,24 @@ p {
   fill: currentColor;
 }
 
-.list.contact {
+.header-contact {
   margin-left: auto;
 }
 
-.contact-list:not(:last-child) {
+.header-contact__list:not(:last-child) {
   margin-right: 30px;
 }
 /* ================================
 иконки конверт и телефон - start 
 =================================  */
-.contact-icon {
+.header-contact__icon {
   margin-right: 10px;
   fill: currentColor
   
 }
 
-.link-head-contact:hover.contact-icon,
-.link-head-contact:focus.contact-icon {
+.header-contact__link:hover.header-contact__icon,
+.header-contact__link:focus.header-contact__icon {
   color: var(--accent-color);
 }
 
@@ -680,7 +719,7 @@ SECTION Преимущества - start
   padding-bottom: 0;
 }
 
-.list.flex > .quality-item {
+.list > .quality-item {
   flex-basis: calc(100% / 4 - 30px);
 }
 
@@ -906,7 +945,9 @@ SECTION Постоянные клиенты - start
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
-  
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .clients-item {
@@ -953,10 +994,31 @@ SECTION Постоянные клиенты - end
   padding-bottom: 60px;
   background: #2f303a;
 }
-/* 
-.footer-box-icon {
-  padding-bottom: 30px;
-} */
+
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__box {
+display: list-item;
+
+}
 
 .address {
   margin-bottom: 9px;
@@ -966,11 +1028,21 @@ SECTION Постоянные клиенты - end
   color: var(--wight-color);
 }
 
-.adress-list {
+.contact {
+display: block;
+list-style: none;
+padding: 0;
+margin: 0;
+font-size: 14px;
+text-decoration: none;
+color: rgba(255, 255, 255, 0.6);
+}
+
+.contact__link {
   margin-bottom: 9px;
 }
 
-.contact {
+.contact__text {
   font-size: 14px;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
@@ -980,12 +1052,12 @@ SECTION Постоянные клиенты - end
 Присоединяйтесь, ссылки на соц сети
 ================================ */
 
-.footer-box:not(:last-child) {
+.footer__box:not(:last-child) {
 margin-right: 70px;
 }
 
 .footer-custom {
-  margin-left: auto;
+  margin-left: 32px;
 }
 
 .footer-title {
@@ -1012,6 +1084,7 @@ margin-right: 70px;
   list-style: none;
   padding-left: 0;
   padding-bottom: 30px;
+  margin: 0;
   }
 
 
