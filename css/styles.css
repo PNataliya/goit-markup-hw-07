@@ -82,15 +82,15 @@ p {
   overflow: hidden;
 }
 
-.team-title,
-.hero-title,
-.covorker-title,
+.container-team__title,
+.hero-container__title,
+.covorker__title,
 .portfolio-title,
 .portfolio-text,
 .quality-title,
-.title-section,
-.clients-title,
-.paragraph,
+.container-doing__title,
+.container-clients__title,
+.quality-paragraph,
 .not-displayed,
 .futer-title {
   padding: 0px;
@@ -357,7 +357,9 @@ SECTION Герой - start
   padding-bottom: 94px;
 }
 
-.hero-section {
+.hero {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--bg-color-hero);
   text-align: center;
 }
@@ -366,7 +368,7 @@ SECTION Герой - start
 фон на весь блок Герой - start 
 ============================ */
 
-.overlay {
+.hero--overlay {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -383,7 +385,17 @@ SECTION Герой - start
   background-size: cover;
 }
 
-.hero-title {
+
+.hero-container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+
+.hero-container__title {
   margin-top: 0;
   margin-bottom: 30px;
   font-weight: 900;
@@ -412,7 +424,7 @@ Button Заказать услугу - start
   border-radius: 4px;
 }
 
-.hero-button {
+.hero-container__button {
   box-shadow: var(--box-shadow-button);
   padding: 10px 32px;
   font-weight: 700;
@@ -423,8 +435,8 @@ Button Заказать услугу - start
   background-color: var(--accent-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hero-button:hover,
-.hero-button:focus {
+.hero-container__button:hover,
+.hero-container__button:focus {
   background-color: #188CE8;
 }
 
@@ -455,20 +467,20 @@ Button Заказать услугу - end
 
 .modal {
   position: absolute;
-top: 50%;
-left: 50%;
-padding: 40px;
-text-align: left;
-min-width: 528px;
-min-height: 581px;
-background-color: var(--wight-color);
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-0px 1px 1px rgba(0, 0, 0, 0.14),
-0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  text-align: left;
+  min-width: 528px;
+  min-height: 581px;
+  background-color: var(--wight-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 
-transform: translate(-50%, -50%) scaleX(1);
-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ transform: translate(-50%,   -50%) scaleX(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
@@ -476,7 +488,17 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 
-.close-modal {
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+  color: var(--title-text-color);
+}
+
+.modal-close {
   position: absolute;
   display: flex;
   align-items: center;
@@ -493,12 +515,12 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;   
 } 
 
-.close-svg { 
+.modal-close__svg { 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
-.close-modal:hover .close-svg,
-.close-modal:focus .close-svg {
+.modal-close:hover .modal-close__svg,
+.modal-close:focus .modal-close__svg {
   fill: var(--accent-color);
 }
 
@@ -511,7 +533,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
  justify-content: center;
 }
 
-.form-box {
+.form-data__box {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -519,7 +541,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 10px;
 }
 
-.form-label {
+.form-data__label {
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.16;
@@ -527,7 +549,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--primary-text-color);
 }
 
-.form-input {
+.form-data__input {
   width: 448px;
   padding: 11px 12px 11px 42px;
   outline: transparent;
@@ -538,7 +560,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
-.form-icon {
+.form-data__icon {
   position: absolute;
   left: 12px;
   bottom: 11px;
@@ -546,7 +568,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.comment-box {
+.form-data__comment-box {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -572,7 +594,7 @@ textarea {
 }
 
 
-.confirm-label {
+.form-data__confirm-label {
   position: relative;
   display: flex;
   justify-content: center;
@@ -586,18 +608,18 @@ textarea {
 }
 
 
-.form-input:hover,
-.form-input:focus,
+.form-data__input:hover,
+.form-data__input:focus,
 textarea:hover,
 textarea:focus,
-.form-input:not(:placeholder-shown),
+.form-data__input:not(:placeholder-shown),
 textarea:not(:placeholder-shown){
   border: 1px solid var(--accent-color);
 }
 
-.form-input:hover+.form-icon,
-.form-input:focus+.form-icon,
-.form-input:not(:placeholder-shown)+.form-icon {
+.form-data__input:hover+.form-data__icon,
+.form-data__input:focus+.form-data__icon,
+.form-data__input:not(:placeholder-shown)+.form-data__icon {
   fill: var(--accent-color);
 }
 
@@ -607,22 +629,14 @@ textarea:not(:placeholder-shown){
   color: #2196f3;
 }
 
-.form-title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 12px;
-  color: var(--title-text-color);
-}
+
 
 
 .form-box.comment {
   margin-bottom: 0;
 }
 
-.confirm-label {
+.form-data__confirm-label {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -635,27 +649,27 @@ textarea:not(:placeholder-shown){
   color: var(--primary-text-color);
 }
 
-.confirm-accent {
+.form-data__confirm-accent {
   text-decoration-line: underline;
   color: var(--accent-color);
   cursor: pointer;
 }
 
 /* скрыть элемент checkbox по-умолчанию при этом сохранив все его свойства */
-.confirm-input {
+.form-data__confirm-input {
   -wekit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.confirm-input {
+.form-data__confirm-input {
   position: absolute;
   top: 5px;
   left: 1px;
 }
 
 
-.confirm-item {
+.form-data__confirm-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -667,12 +681,12 @@ textarea:not(:placeholder-shown){
 }
 
 
-.confirm-icon {
+.form-data__confirm-icon {
   fill: var(--wight-color);
 }
 
 
-.confirm-input:checked + .confirm-item {
+.form-data__confirm-input:checked + .form-data__confirm-item {
   background-color: var(--accent-color);
   border: 2px solid var(--accent-color);
   
@@ -680,7 +694,7 @@ textarea:not(:placeholder-shown){
 
 /* =========================== */
 
-.form-submit {
+.form-data__submit {
   padding: 10px 55px;
   margin-left: auto;
   margin-right: auto;
@@ -695,8 +709,8 @@ textarea:not(:placeholder-shown){
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-submit:hover,
-.form-submit:focus {
+.form-data__submit:hover,
+.form-data__submit:focus {
   background-color: #188CE8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -715,20 +729,34 @@ section Герой - end
 SECTION Преимущества - start
 ========================== */
 
-.section.quality {
+.section-quality {
+  padding-top: 94px;
   padding-bottom: 0;
 }
 
-.list > .quality-item {
+.container__visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+.list > .list__quality-item {
   flex-basis: calc(100% / 4 - 30px);
 }
 
-.quality-item {
+.list__quality-item {
   margin-right: 30px;
   
 }
 
-.quality-item:last-child {
+.list__quality-item:last-child {
   margin-right: 0;
 }
 
@@ -736,7 +764,7 @@ SECTION Преимущества - start
     иконка фон - start
  ================== */
 
-.quality-item {
+.list__quality-item {
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -750,7 +778,7 @@ SECTION Преимущества - start
   border-radius: 4px;
 }
 
-.icon.svg {
+.quality-paragraph {
   margin: auto;
 }
 
@@ -768,7 +796,7 @@ SECTION Преимущества - start
   color: var(--title-text-color);
 
 }
-.paragraph.quality {
+.quality-paragraph {
   font-size: 14px;
   line-height: 1.71;
   color: var(--primary-text-color);
@@ -782,7 +810,16 @@ SECTION Преимущества - end
 /* ============================== 
 SECTION Чем мы занимаемся - start
 =============================== */
-.title-section {
+
+.container-doing {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container-doing__title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -792,16 +829,16 @@ SECTION Чем мы занимаемся - start
   color: var(--title-text-color);
 }
 
-.specialization-item {
+.list__specialization {
   position: relative;
 }
 
-.specialization-item:not(:last-child) {
+.list__specialization:not(:last-child) {
   margin-right: 30px;
 }
 
 
-.card-title {
+.list__card-title {
   position: absolute;
   padding: 27px 0;
   width: 100%;
@@ -826,10 +863,20 @@ SECTION Наша команда - start
 ============================== */
 
 .team-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--bg-color-section);
 }
 
-.team-title {
+.container-team {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container-team__title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -839,22 +886,32 @@ SECTION Наша команда - start
   color: var(--title-text-color);
 }
 
-.covorker {
+.list-covorker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.list-covorker__item {
   background-color: var(--wight-color)
 }
 
-.covorker-box {
+.covorker__box {
   padding: 30px 15px;
   box-shadow: var(--box-shadow-card);
   border-radius: 0px 0px 4px 4px;
 }
 
-.covorker:not(:last-child) {
+.list-covorker__item:not(:last-child) {
   margin-right: 30px;
 }
 
 
-.covorker-title {
+.covorker__title {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -862,7 +919,7 @@ SECTION Наша команда - start
   text-align: center;
   color: var(--title-text-color);
 }
-.covorker-position {
+.covorker__paragraph {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.18;
@@ -874,20 +931,24 @@ SECTION Наша команда - start
 ICON social-link - start
 ======================== */
 
-.socials-list { 
+.socials__list { 
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.socials-item {
+.social__item {
   margin-right: 10px;
 }
-.socials-item:last-child {
+.socials__item:last-child {
   margin-right: 0;
 }
 
-.socials-link {
+.socials__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -900,18 +961,18 @@ ICON social-link - start
   cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.socials-link:hover,
-.socials-link:focus {
+.socials__link:hover,
+.socials__link:focus {
   background-color: var(--accent-color);
 }
 
-.socials-icon {
+.socials__icon {
   fill: var(--bg-icon);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.socials-link:hover .socials-icon,
-.socials-link:focus .socials-icon {
+.socials__link:hover .socials__icon,
+.socials__link:focus .socials__icon {
   fill: #ffffff;
 }
 
@@ -926,8 +987,20 @@ SECTION Наша команда - end
 /* ================================ 
 SECTION Постоянные клиенты - start 
 ================================= */
+.section-clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
-.clients-title {
+.container-clients {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container-clients__title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -950,7 +1023,7 @@ SECTION Постоянные клиенты - start
   margin: 0;
 }
 
-.clients-item {
+.clients-list__item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -966,12 +1039,12 @@ SECTION Постоянные клиенты - start
 }
 
 
-.clients-item:hover {
+.clients-list__item:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.clients-icon {
+.clients-list__icon {
   fill: currentColor;
 }
 /* ========================== 
