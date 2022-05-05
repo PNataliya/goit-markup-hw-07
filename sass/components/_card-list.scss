@@ -81,10 +81,8 @@ CARD LIST ПОРТФОЛИО - start
 
 .portfolio-box__title {
     margin-bottom: 4px;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    color: $title-text-color;
+    @include portfolio-box-title;
+    
 }
 
 .portfolio-box__text {

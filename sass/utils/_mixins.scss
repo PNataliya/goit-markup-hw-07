@@ -12,14 +12,19 @@
     padding-right: 15px;
 }
 
-@mixin button {
-    display: inline-flex;
-    align-items: center;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    border-radius: 4px;
-}
+@mixin visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    
+} 
 
 // Navigate font
 @mixin navigate-font {
@@ -45,16 +50,6 @@
     line-height: $header-link-line-height;
     letter-spacing: $header-link-letter-spacing;  
 }
-
-
-
-// BUTTON font style
-@mixin button-font-style {
-    $font-weight-button: 700;
-    $font-size-button: 16px;
-    $line-height-button: 1.87;
-}
-
 
 
 // Page Studio
@@ -116,14 +111,10 @@
 }
 
 
-@mixin title-card {
+@mixin portfolio-box-titled {
         font-size: $title-card-size;
         line-height: $title-card-height;
         letter-spacing: $title-card-letter-spacing;
         color: $title-text-color;
 }
 
-// .portfolio-box__title {
-//     @include title-card;
-//     margin-bottom: 4px;
-// }

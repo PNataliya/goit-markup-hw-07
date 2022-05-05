@@ -13,6 +13,7 @@ img {
   text-decoration: none;
 }
 
+
 .list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -684,6 +685,14 @@ textarea:not(:placeholder-shown) {
 /* =========================
 SECTION Преимущества - start
 ========================== */
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .section-quality {
   padding-top: 94px;
   padding-bottom: 94px;

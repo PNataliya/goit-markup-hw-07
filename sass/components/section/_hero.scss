@@ -8,15 +8,16 @@
     @include hero-overlay;
 }
 
+
 .hero-container {
     @include container;
-}
 
-.hero-container__title {
+    .hero-container__title {
     margin-top: 0;
     margin-bottom: 30px;
     @include title-hero-font;
     color: $wight-color;
     text-align: center;
     text-transform: uppercase;
+}
 }

@@ -23,22 +23,13 @@
     text-decoration: none;
     color: $primary-text-color;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
 }
 
-.header-contact__link:hover,
-.header-contact__link:focus {
-    color: $accent-color;
-}
-
-.navlist__link:hover,
-.navlist__link:focus {
-    color: $accent-color;
-}
-
-
-.navlist__site--current>.navlist__link--active {
-    color: $accent-color;
-}
 
 .icon-page {
     fill: currentColor;
@@ -46,24 +37,27 @@
 
 .header-contact {
     margin-left: auto;
-}
 
-.header-contact__list:not(:last-child) {
+   .header-contact__list:not(:last-child) {
     margin-right: 30px;
 }
+}
+
 
 /* ================================
 иконки конверт и телефон - start 
 =================================  */
 .header-contact__icon {
     margin-right: 10px;
-    fill: currentColor
-}
+    fill: currentColor;
 
-.header-contact__link:hover.header-contact__icon,
-.header-contact__link:focus.header-contact__icon {
+
+.header-contact__link:hover &,
+.header-contact__link:focus & {
     color: $accent-color;
 }
+}
+
 
 /* ================================
 иконки конверт и телефон - end 
