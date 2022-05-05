@@ -112,9 +112,8 @@
 
 
 @mixin portfolio-box-titled {
-        font-size: $title-card-size;
-        line-height: $title-card-height;
-        letter-spacing: $title-card-letter-spacing;
-        color: $title-text-color;
+    font-size: $title-card-size;
+    line-height: $title-card-height;        letter-spacing: $title-card-letter-spacing;
+    color: $title-text-color;
 }
 

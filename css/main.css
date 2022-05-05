@@ -13,7 +13,6 @@ img {
   text-decoration: none;
 }
 
-
 .list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,8 +82,7 @@ Heder  - start
 .header {
   border-bottom: 1px solid #ececec;
 }
-
-.header__container {
+.header .header__container {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -160,6 +158,9 @@ Heder  - start
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.navlist__link:hover, .navlist__link:focus {
+  color: #2196f3;
+}
 
 .navlist__link--active {
   position: relative;
@@ -169,7 +170,6 @@ Heder  - start
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
 }
-
 .navlist__link--active::after {
   position: absolute;
   content: "";
@@ -179,6 +179,10 @@ Heder  - start
   height: 4px;
   background: #2196F3;
   border-radius: 2px;
+}
+
+.navlist__site--current > .navlist__link--active {
+  color: #2196f3;
 }
 
 /* ==============================
@@ -223,18 +227,7 @@ Heder  - start
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.header-contact__link:hover,
-.header-contact__link:focus {
-  color: #2196f3;
-}
-
-.navlist__link:hover,
-.navlist__link:focus {
-  color: #2196f3;
-}
-
-.navlist__site--current > .navlist__link--active {
+.header-contact__link:hover, .header-contact__link:focus {
   color: #2196f3;
 }
 
@@ -245,8 +238,7 @@ Heder  - start
 .header-contact {
   margin-left: auto;
 }
-
-.header-contact__list:not(:last-child) {
+.header-contact .header-contact__list:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -257,9 +249,7 @@ Heder  - start
   margin-right: 10px;
   fill: currentColor;
 }
-
-.header-contact__link:hover.header-contact__icon,
-.header-contact__link:focus.header-contact__icon {
+.header-contact__link:hover .header-contact__icon, .header-contact__link:focus .header-contact__icon {
   color: #2196f3;
 }
 
@@ -293,8 +283,7 @@ Heder  - start
   padding-left: 15px;
   padding-right: 15px;
 }
-
-.hero-container__title {
+.hero-container .hero-container__title {
   margin-top: 0;
   margin-bottom: 30px;
   font-weight: 900;
@@ -335,9 +324,7 @@ Button Заказать услугу - start
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.hero-container__button:hover,
-.hero-container__button:focus {
+.hero-container__button:hover, .hero-container__button:focus {
   background-color: #188CE8;
 }
 
@@ -428,9 +415,7 @@ Button Заказать услугу - end
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.modal-close:hover .modal-close__svg,
-.modal-close:focus .modal-close__svg {
+.modal-close:hover .modal-close__svg, .modal-close:focus .modal-close__svg {
   fill: #2196f3;
 }
 
@@ -685,21 +670,19 @@ textarea:not(:placeholder-shown) {
 /* =========================
 SECTION Преимущества - start
 ========================== */
-.container {
+.section-quality {
+  padding-top: 94px;
+  padding-bottom: 0;
+}
+
+.container-quality {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-
-.section-quality {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  padding-bottom: 0;
-}
-
-.container__visually-hidden {
+.container-quality .container-quality__visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
