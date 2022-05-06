@@ -1476,6 +1476,7 @@ CARD LIST ПОРТФОЛИО - start
 }
 
 .portfolio-box__title {
+  margin-top: 0;
   margin-bottom: 4px;
   font-size: 18px;
   line-height: 2;
@@ -1484,6 +1485,7 @@ CARD LIST ПОРТФОЛИО - start
 }
 
 .portfolio-box__text {
+  margin: 0;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
